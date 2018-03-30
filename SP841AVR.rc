@@ -1,0 +1,115 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "Plik"
+    BEGIN
+        MENUITEM "Koniec\tCtrl-X",              ID_KONIEC
+    END
+    POPUP "Symulacja"
+    BEGIN
+        MENUITEM "Start/Stop\tF5",              ID_SYMULACJA_START
+        MENUITEM SEPARATOR
+        MENUITEM "Reset\tF7",                   ID_SYMULACJA_RESET
+    END
+    POPUP "Opcje"
+    BEGIN
+        MENUITEM "Konwertuj program\tCtrl+K",   IDC_KONWERTUJ
+        MENUITEM "Zapis do pliku\tCtrl+S",      ID_OPCJE_ZAPISDOPLIKU
+        MENUITEM "KasujPlik",                   IDC_KASUJPLIK
+    END
+    POPUP "O programie"
+    BEGIN
+        MENUITEM "Pomoc\tCtrl+F1",              ID_POMOC
+        MENUITEM SEPARATOR
+        MENUITEM "Autor",                       ID_AUTOR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_STATUS_BAR           "Pokazuje lub ukrywa pasek stanu"
+END
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
