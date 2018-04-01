@@ -38,19 +38,12 @@ void zadanie1(void)
     {
         case 1:
             L1 = 0; L2 = 0;
-            if (aK1 && !aK2)
+            if (aK1 && !aK2 && wysokosc > 0)
             {
                 stan1 = 2;
-                if (wysokosc < 1)
-                {
-                    stan1 = 4;
-                }
-                else if (wysokosc > 0)
-                {
-                    wysokosc = wysokosc - 1;
-                    wsp = 0.2 * sek + ((wysokosc * 2 * sek) / 300);
-                    tim1 = wsp;
-                }
+                wysokosc = wysokosc - 1;
+                wsp = ((wysokosc * 500) / 300);
+                tim1 = wsp;
                 //tim3=2*sek;
             }
             else if (aK1 && aK2)
@@ -64,17 +57,18 @@ void zadanie1(void)
             L1 = 1; L2 = 0;
             if (aK1 && wysokosc > 0)
                 wysokosc = wysokosc - 1;
-            else if (wysokosc < 1)
+
+			//cases
+			if (wysokosc < 1)
             {
                 stan1 = 4;
             }
-            wsp = sek / 10;
-            if (!tim1 && aK1)
+            else if (!tim1 && aK1)
             {
                 stan1 = 3;
-                tim1 = wsp;
+                tim1 = sek/10;
             }
-            if (!aK1)
+            else if (!aK1)
             {
                 stan1 = 1;
             }
@@ -88,6 +82,8 @@ void zadanie1(void)
             L1 = 0; L2 = 0;
             if (aK1 && wysokosc > 0)
                 wysokosc = wysokosc - 1;
+
+			//cases
             if (wysokosc < 1)
             {
                 stan1 = 4;
@@ -95,8 +91,12 @@ void zadanie1(void)
             if (!tim1 && aK1)
             {
                 stan1 = 2;
-                wsp = 0.2 * sek + ((wysokosc * 2 * sek) / 500);
+                wsp =   ((wysokosc * 500) / 300);
                 tim1 = wsp;
+            }
+			else if (!aK1)
+            {
+                stan1 = 1;
             }
             else if (aK1 && aK2)
             {
@@ -106,22 +106,25 @@ void zadanie1(void)
 
         case 4:
             L1 = 0; L2 = 1;
+
             if (flaga == 1)
             {
                 licznikOpuszczen++;
                 flaga = 0;
             }
+
+			//cases
             if (aK2)
             {
                 stan1 = 1;
-                stan2 = 1;
-                stan3 = 1;
-                predkosc = 1;
+            
             }
             break;
 
         case 5:
-            L2 = 0; L3 = 0; L4 = 0;
+            L2 = 0; L1=0;
+			if(!aK2)
+				stan1=1;
             break;
     }
 
@@ -129,16 +132,13 @@ void zadanie1(void)
     switch (stan2)
     {
         case 1:
+			//cases
             if (aK2 && !aK1 && wysokosc < 300)
             {
                 stan2 = 2;
                 wysokosc = wysokosc + 1;
-                wsp = 2 * sek - ((wysokosc * 2 * sek) / 300);
+                wsp = 500 - ((wysokosc * 500) / 300);
                 tim2 = wsp;
-            }
-            else if (wysokosc >= 300)
-            {
-                stan2 = 4;
             }
             else if (aK1 && aK2)
             {
@@ -150,12 +150,12 @@ void zadanie1(void)
             L1 = 1;
             if (aK2 && wysokosc < 300)
                 wysokosc = wysokosc + 1;
-            else
-            {
-                stan2 = 4;
-            }
+
             wsp = (wysokosc / 100);
-            if (!tim2 && aK2)
+			//cases
+			if(wysokosc>=300)
+				stan2=4;
+            else if (!tim2 && aK2)
             {
                 stan2 = 3;
                 tim2 = sek / 10;
@@ -171,17 +171,18 @@ void zadanie1(void)
             break;
         case 3:
             L1 = 0;
-            if (aK1 && aK2)
-            {
-                stan2 = 5;
-            }
-            else if (aK2 && wysokosc < 300)
+            if (aK2 && wysokosc < 300)
                 wysokosc = wysokosc + 1;
-            if (!tim2 && aK2 && wysokosc < 300)
+			//cases
+            if (!tim2 && aK2)
             {
                 stan2 = 2;
-                wsp = 2 * sek - ((wysokosc * 2 * sek) / 300);
+                wsp =  500 - ((wysokosc * 500) / 300);
                 tim2 = wsp;
+            }
+			else if (aK1 && aK2)
+            {
+                stan2 = 5;
             }
             else if (wysokosc >= 300)
             {
@@ -192,20 +193,25 @@ void zadanie1(void)
                 stan2 = 1;
             }
             break;
+
         case 4:
             L2 = 1;
             if (flaga == 0) 
 			{
 				flaga = 1; 
 			}
+			//cases
             if (aK1) 
 			{
-				stan1 = 2; 
+
 				stan2 = 1; 
 			}
             break;
 
-        case 5: L2 = 0; L3 = 0; L4 = 0; break;
+        case 5: L2 = 0;
+			if(!aK1)
+				stan2=1;
+			break;
     }
 
     //////////////////////////////////////PREDKOSC//////////////////////////////////////////////////////////////////
@@ -330,7 +336,7 @@ void zadanie1(void)
             {
                 stan4 = 2;
                 licznikOpuszczenTemp = licznikOpuszczen;
-                tim5 = 3 * sek;
+                tim5 = 1 * sek;
             }
             break;
 
@@ -346,7 +352,8 @@ void zadanie1(void)
 			}
             else if (!tim5 && !aK3)
             {
-                stan4 = 3; tim5 = 2 * sek;
+                stan4 = 3; 
+				tim5 = 0.5 * sek;
                 licznikOpuszczenTemp = licznikOpuszczenTemp - 1;
             }
             break;
@@ -360,7 +367,7 @@ void zadanie1(void)
             else if (!tim5 && !aK3)
             {
                 stan4 = 2;
-                tim5 = 3 * sek;
+                tim5 = 1 * sek;
             }
             break;
 
@@ -369,7 +376,7 @@ void zadanie1(void)
             if (!aK3)
             {
                 stan4 = 2;
-                tim5 = 3 * sek;
+                tim5 = 1 * sek;
             }
             break;
     }
