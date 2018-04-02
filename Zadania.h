@@ -16,7 +16,7 @@ char stan4 = 1;
 char stan5 = 1;
 char stan6 = 1;
 int licznikOpuszczen = 0;
-int migniecia = 0;
+int flaga = 0;
 
 int licznikOpuszczenTemp = 0;
 
@@ -390,7 +390,7 @@ void zadanie1(void)
             {
                 if (aK1 && !aK2)
                 {
-                    stan5 = 2;
+                    stan5 = 2; 
                     tim6 = 1 * sek;
                 }
                 else if (aK2 && !aK1)
@@ -500,22 +500,17 @@ void zadanie1(void)
             break;
 
         case 2:
-            L6 = 1; if (!tim8 && migniecia >= 0 && migniecia < 4)
+            L6 = 1; if (!tim8 && 1)
             {
                 stan6 = 3;
-                migniecia = migniecia + 1;
+                //flaga = flaga + 1;
                 tim8 = 1 * sek;
-            }
-            else if (migniecia > 3)
-            {
-                stan6 = 1;
-				migniecia = 0;
             }
             break;
 
         case 3:
             L6 = 0;
-            if (!tim8)
+            if (!tim8 && 1)
             {
                 stan6 = 4;
                 tim8 = 0.5 * sek;
@@ -524,16 +519,21 @@ void zadanie1(void)
 
         case 4:
             L6 = 1;
-            if (!tim8 && migniecia >= 0 && migniecia < 4)
+            if (!tim8 && !flaga)
             {
                 stan6 = 5;
-                migniecia = migniecia + 1;
+                //flaga = flaga + 1;
                 tim8 = 1 * sek;
             }
-            else if (migniecia > 3)
+            else if (!tim8 && flaga && aK6)
             {
                 stan6 = 6;
-                migniecia = 0;
+                flaga = 0;
+            }
+			else if (!tim8 && flaga && !aK6)
+            {
+                stan6 = 1;
+                flaga = 0;
             }
             break;
 
@@ -543,11 +543,7 @@ void zadanie1(void)
             {
                 stan6 = 2;
                 tim8 = 1 * sek;
-            }
-            if (migniecia > 3)
-            {
-                stan6 = 6;
-                migniecia = 0;
+				flaga=1;
             }
             break;
 
