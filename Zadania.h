@@ -331,8 +331,7 @@ void zadanie1(void)
     {
         case 1:
             L4 = 0;
-            licznikOpuszczenTemp = licznikOpuszczen;
-            if (aK3 && licznikOpuszczenTemp > 0)
+            if (aK3 && licznikOpuszczen > 0)
             {
                 stan4 = 2;
                 licznikOpuszczenTemp = licznikOpuszczen;
@@ -346,7 +345,7 @@ void zadanie1(void)
             {
                 stan4 = 1;
             }
-            if (aK3) 
+            else if (aK3) 
 			{
 				stan4 = 4;
 			}
@@ -500,10 +499,10 @@ void zadanie1(void)
             break;
 
         case 2:
-            L6 = 1; if (!tim8 && 1)
+            L6 = 1; 
+			if (!tim8 && 1)
             {
                 stan6 = 3;
-                //flaga = flaga + 1;
                 tim8 = 1 * sek;
             }
             break;
@@ -539,7 +538,7 @@ void zadanie1(void)
 
         case 5:
             L6 = 0;
-            if (!tim8)
+            if (!tim8 && 1)
             {
                 stan6 = 2;
                 tim8 = 1 * sek;
