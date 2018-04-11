@@ -16,8 +16,6 @@ char stan4 = 1;
 char stan5 = 1;
 char stan6 = 1;
 int licznikOpuszczen = 0;
-int flaga = 0;
-
 int licznikOpuszczenTemp = 0;
 
 int flaga = 1;
@@ -56,9 +54,9 @@ void zadanie1(void)
         case 2:
             L1 = 1; L2 = 0;
             if (aK1 && wysokosc > 0)
-                wysokosc = wysokosc - 1;
-
-			//cases
+            {
+				wysokosc = wysokosc - 1;
+			}
 			if (wysokosc < 1)
             {
                 stan1 = 4;
@@ -82,13 +80,11 @@ void zadanie1(void)
             L1 = 0; L2 = 0;
             if (aK1 && wysokosc > 0)
                 wysokosc = wysokosc - 1;
-
-			//cases
             if (wysokosc < 1)
             {
                 stan1 = 4;
             }
-            if (!tim1 && aK1)
+            else if (!tim1 && aK1)
             {
                 stan1 = 2;
                 wsp =   ((wysokosc * 500) / 300);
@@ -112,8 +108,6 @@ void zadanie1(void)
                 licznikOpuszczen++;
                 flaga = 0;
             }
-
-			//cases
             if (aK2)
             {
                 stan1 = 1;
@@ -150,9 +144,6 @@ void zadanie1(void)
             L1 = 1;
             if (aK2 && wysokosc < 300)
                 wysokosc = wysokosc + 1;
-
-            wsp = (wysokosc / 100);
-			//cases
 			if(wysokosc>=300)
 				stan2=4;
             else if (!tim2 && aK2)
@@ -173,7 +164,6 @@ void zadanie1(void)
             L1 = 0;
             if (aK2 && wysokosc < 300)
                 wysokosc = wysokosc + 1;
-			//cases
             if (!tim2 && aK2)
             {
                 stan2 = 2;
@@ -200,10 +190,8 @@ void zadanie1(void)
 			{
 				flaga = 1; 
 			}
-			//cases
             if (aK1) 
 			{
-
 				stan2 = 1; 
 			}
             break;
@@ -229,7 +217,7 @@ void zadanie1(void)
                 stan3 = 2;
             }
 
-            if ((!aK1 && aK2) && pom_predkosc > 0)
+            if (!aK1 && aK2 && pom_predkosc > 0)
             {
 				predkosc=(predkosc*wysokosc*sek)/(predkosc*100);
                 pom_predkosc = 10 - pom_predkosc;
@@ -385,78 +373,67 @@ void zadanie1(void)
     {
         case 1:
             L5 = 0;
-            if (wysokosc > 0 && wysokosc < 300)
+            if (wysokosc > 0 && wysokosc < 300 && aK1 && !aK2)
             {
-                if (aK1 && !aK2)
-                {
-                    stan5 = 2; 
-                    tim6 = 1 * sek;
-                }
-                else if (aK2 && !aK1)
-                {
-                    stan5 = 2; 
-					tim7 = 0.5 * sek;
-                }
-                else if (aK1 && aK2)
-                {
-                    stan5 = 4;
-                }
+                stan5 = 2; 
+                tim6 = 1 * sek;
+            }
+            else if (wysokosc > 0 && wysokosc < 300 && aK2 && !aK1)
+            {
+                stan5 = 2; 
+				tim7 = 0.5 * sek;
+            }
+            else if (wysokosc > 0 && wysokosc < 300 && aK1 && aK2)
+            {
+                stan5 = 4;
             }
             break;
 
         case 2:
             L5 = 1;
-            if (wysokosc > 0 && wysokosc < 300)
+            if (wysokosc > 0 && wysokosc < 300 && !tim6 && aK1 && !aK2)
             {
-                if (!tim6 && aK1 && !aK2)
-                {
-                    stan5 = 3; 
-					tim6 = 0.5 * sek;
-                }
-                else if (!tim7 && !aK1 && aK2)
-                {
-                    stan5 = 3;
-                    tim7 = 1 * sek;
-                }
-                else if (aK1 && aK2)
-                {
-                    stan5 = 4;
-                }
-                else if (!aK2 && !aK1)
-                {
-                    stan5 = 1;
-                }
+                stan5 = 3; 
+				tim6 = 0.5 * sek;
             }
-            else
+            else if (wysokosc > 0 && wysokosc < 300 &&!tim7 && !aK1 && aK2)
+            {
+                stan5 = 3;
+                tim7 = 1 * sek;
+            }
+            else if (wysokosc > 0 && wysokosc < 300 &&aK1 && aK2)
+            {
+                stan5 = 4;
+            }
+            else if (wysokosc > 0 && wysokosc < 300 &&!aK2 && !aK1)
             {
                 stan5 = 1;
             }
+            
+            /*else
+            {
+                stan5 = 1;
+            }*/
             break;
 
         case 3:
             L5 = 0; 
-			if (wysokosc > 0 && wysokosc < 300)
+			if (wysokosc > 0 && wysokosc < 300 && !tim6 && aK1 && !aK2)
             {
-                if (!tim6 && aK1 && !aK2)
-                {
-                    stan5 = 2;
-                    tim6 = 1 * sek;
-                }
-                else if (!tim7 && aK2 && !aK1)
-                {
-                    stan5 = 2;
-                    tim7 = 0.5 * sek;
-                }
-                else if (aK1 && aK2)
-                {
-                    stan5 = 4;
-                }
-                else if (!aK2 && !aK1)
-                {
-                    stan5 = 1;
-                }
+
+                stan5 = 2;
+                tim6 = 1 * sek;
             }
-            else
+            else if (wysokosc > 0 && wysokosc < 300 &&!tim7 && aK2 && !aK1)
+            {
+                stan5 = 2;
+                tim7 = 0.5 * sek;
+            }
+            else if (wysokosc > 0 && wysokosc < 300 &&aK1 && aK2)
+            {
+                stan5 = 4;
+            }
+            else if (wysokosc > 0 && wysokosc < 300 &&!aK2 && !aK1)
             {
                 stan5 = 1;
             }
