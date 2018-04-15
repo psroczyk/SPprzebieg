@@ -207,8 +207,7 @@ void zadanie1(void)
     {
         case 1:
             L3 = 0;
-            wsp_predkosci = (wysokosc / 300); 
-			pom_predkosc = (1 - wsp_predkosci) * 10;
+			pom_predkosc = (1 - (wysokosc / 300)) * 10;
             if ((aK1 && !aK2) && pom_predkosc > 0)
             {
 				predkosc=(predkosc*wysokosc*sek)/(predkosc*100);
@@ -245,14 +244,12 @@ void zadanie1(void)
             break;
         case 3:
             L3 = 0;
-            if (predkosc > 0 && (wysokosc > 0 && wysokosc < 300) && aK1)
+            if (predkosc > 0 && wysokosc > 0 && wysokosc < 300 && aK1 && !tim3)
             {
-                if (!tim3 && (aK1 || !aK2))
-                {
-                    stan3 = 2; wsp_predkosci = (wysokosc / 300);
-                    pom_predkosc = (1 - wsp_predkosci) * 10;
-                    tim3 = pom_predkosc * sek;
-                }
+				stan3 = 2; 
+				wsp_predkosci = (wysokosc / 300);
+				pom_predkosc = (1 - wsp_predkosci) * 10;
+				tim3 = pom_predkosc * sek;
             }
             else if (wysokosc <= 0 || wysokosc >= 300)
             {
@@ -292,15 +289,12 @@ void zadanie1(void)
 
         case 6:
             L3 = 0;
-            if (predkosc > 0 && (wysokosc > 0 && wysokosc < 300) && aK2)
+            if (predkosc > 0 && (wysokosc > 0 && wysokosc < 300) && aK2 && !tim3)
             {
-                if (!tim3 && (!aK1 && aK2))
-                {
-                    stan3 = 5; wsp_predkosci = (wysokosc / 300);
-                    pom_predkosc = (1 - wsp_predkosci) * 10;
-                    pom_predkosc = 10 - pom_predkosc;
-                    tim3 = pom_predkosc * sek;
-                }
+				stan3 = 5; 
+				wsp_predkosci = (wysokosc / 300);
+				pom_predkosc = 10 - (1 - wsp_predkosci) * 10;;
+				tim3 = pom_predkosc * sek;
             }
             else if (wysokosc <= 0 || wysokosc >= 300)
             {
@@ -387,6 +381,10 @@ void zadanie1(void)
             {
                 stan5 = 4;
             }
+			else if(wysokosc<=0 || wysokosc >=300)
+			{
+				stan5 = 1;
+			}
             break;
 
         case 2:
@@ -409,7 +407,10 @@ void zadanie1(void)
             {
                 stan5 = 1;
             }
-            
+			else if(wysokosc<=0 || wysokosc >=300)
+			{
+				stan5 = 1;
+			}
             /*else
             {
                 stan5 = 1;
@@ -437,6 +438,10 @@ void zadanie1(void)
             {
                 stan5 = 1;
             }
+			else if(wysokosc<=0 || wysokosc >=300)
+			{
+				stan5 = 1;
+			}
             break;
 
 

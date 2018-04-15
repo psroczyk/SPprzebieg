@@ -1,4 +1,4 @@
-﻿Build started 11.04.2018 20:02:35.
+﻿Build started 15.04.2018 13:04:30.
      1>Project "C:\Users\Pawel-Notebook\Desktop\SPprzebieg\SPprzebieg\SPprzebieg.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating ".\Debug\SPprzebieg.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -9,19 +9,19 @@
      1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(91): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
      1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(135): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
      1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(171): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(214): warning C4244: '=' : conversion from 'volatile float' to 'int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(215): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(222): warning C4244: '=' : conversion from 'volatile float' to 'int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(224): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(234): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(254): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(281): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(302): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(343): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(384): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(397): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(430): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
-     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(492): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(213): warning C4244: '=' : conversion from 'volatile float' to 'int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(214): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(221): warning C4244: '=' : conversion from 'volatile float' to 'int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(223): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(233): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(252): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(278): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(297): warning C4244: '=' : conversion from 'float' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(337): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(378): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(395): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(431): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
+     1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\zadania.h(497): warning C4244: '=' : conversion from 'double' to 'volatile int', possible loss of data
      1>c:\users\pawel-notebook\desktop\spprzebieg\spprzebieg\workprzebieg.cpp(39): warning C4244: '=' : conversion from 'volatile float' to 'int', possible loss of data
        ResourceCompile:
          All outputs are up-to-date.
@@ -45,4 +45,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.25
+Time Elapsed 00:00:01.35
